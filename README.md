@@ -1,2 +1,2 @@
-# feedback
-A repository to collect feedback about Bredbox
+# Bredbox Community
+A repository to collect feedback about Bredbox.
