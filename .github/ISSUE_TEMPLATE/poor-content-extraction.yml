@@ -1,0 +1,47 @@
+name: Poor content extraction
+description: Report issues with content extraction quality on Bredbox
+title: "[Content Extraction] "
+labels: ["content"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: What URL did you save?
+      description: Please provide the URL where you're experiencing content extraction issues
+      placeholder: https://example.com/article
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: problems
+    attributes:
+      label: What kind of problems are you seeing?
+      description: Select all that apply
+      options:
+        - label: Missing/incorrect favicon
+        - label: Missing/incorrect image
+        - label: Missing/incorrect title
+        - label: Missing/incorrect author(s)
+        - label: Missing article content
+        - label: Extra HTML artifacts in article content
+        - label: Other (please specify below)
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: Describe the problems you're seeing in more detail. Please provide a screenshot if possible.
+      description: |
+        A detailed description of the content extraction issues you're experiencing.
+        Screenshots are very helpful for understanding the problem.
+      placeholder: |
+        Describe what you expected to see vs. what you actually saw.
+        If you can attach a screenshot, that would be great!
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Anything else we should know?
+      description: Any additional context or information that might help us understand and fix the issue
+      placeholder: Browser information, device type, or any other relevant details...
